@@ -2,10 +2,11 @@ import { readFileSync } from 'fs';
 
 console.log('--- Day 1: Report Repair ---')
 
-var input:number[] = (readFileSync('input.txt', 'utf-8') as string).split('\n').map(x => +x).sort((a,b) => a - b)
+// read file -> split to string[] -> cast to int -> sort ascending 
+var input = (readFileSync('input.txt', 'utf-8') as string).split('\n').map(x => +x).sort((a,b) => a - b)
 
 console.log('--- Part One ---')
-let l:number = 0, r:number = input.length - 1
+let l = 0, r = input.length - 1
 
 while (l < r) {
     if (input[l] + input[r] == 2020) break
@@ -14,7 +15,7 @@ while (l < r) {
 console.log(input[l] * input[r])
 
 console.log('--- Part Two ---')
-let a:number, b:number, c:number
+let a, b, c
 
 for (a = 0; a < input.length -2; a++) {
     b = a + 1
