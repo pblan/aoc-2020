@@ -3,7 +3,7 @@ import { readFileSync } from 'fs';
 console.log('--- Day 1: Report Repair ---')
 
 // read file -> split to string[] -> cast to int -> sort ascending 
-var input = (readFileSync('input.txt', 'utf-8') as string).split('\n').map(x => +x).sort((a,b) => a - b)
+const input = (readFileSync('input.txt', 'utf-8') as string).split('\n').map(x => +x).sort((a,b) => a - b)
 
 console.log('--- Part One ---')
 let l = 0, r = input.length - 1
