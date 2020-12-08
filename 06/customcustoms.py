@@ -1,4 +1,4 @@
-with open ('input.txt', 'r') as f:
+with open('input.txt', 'r') as f:
     groups = [answers.strip() for answers in f.read().split('\n\n')]
 
 print("--- Day 6: Custom Customs ---")
